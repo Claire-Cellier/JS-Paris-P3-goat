@@ -1,0 +1,46 @@
+button {
+	margin: 1rem;
+}
+
+label {
+	margin-bottom: 0.5rem;
+}
+
+.profilecontainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.profileframe {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 20px;
+	background: var(--white);
+	border: 3px solid var(--darkblue);
+	border-radius: 10px;
+	box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.3);
+	width: 50vh;
+	height: auto;
+	padding-top: 10px;
+	margin: 2rem;
+	margin-top: 0;
+}
+
+.emailSection,
+.passwordSection {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+.submit-container {
+	display: flex;
+	justify-content: center; /* Centre le bouton */
+	width: 100%; /* Prend toute la largeur du formulaire */
+	margin-top: 1rem; /* Espacement par rapport aux inputs */
+}

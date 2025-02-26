@@ -1,0 +1,22 @@
+.adverts {
+	display: grid;
+	grid-template-rows: repeat(3, 28rem);
+	grid-template-columns: repeat(3, 25rem);
+	justify-content: center;
+	justify-items: center;
+}
+.no-results {
+	grid-column: 2;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.adverts {
+		grid-template-rows: auto;
+		grid-template-columns: 1fr;
+	}
+	.no-results {
+		grid-column: 1;
+		text-align: center;
+	}
+}

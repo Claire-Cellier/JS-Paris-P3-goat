@@ -1,0 +1,104 @@
+.week-scheduler {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: var(--white);
+	border-radius: 20px;
+	padding: 20px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	max-width: 100%;
+	height: auto;
+	border: 3px solid var(--orange);
+}
+.week-scheduler h2 {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+	color: var(--dark-blue);
+}
+.scheduler-header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.scheduler-header button {
+	background: var(--orange);
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+.scheduler-header button:hover {
+	background: var(--white);
+	color: var(--orange);
+}
+
+.scheduler-grid {
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 10px;
+	width: 100%;
+	height: auto;
+}
+
+.day-column {
+	background: var(--light-gray);
+	padding: 10px;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+	width: fit-content;
+}
+
+.day-column strong {
+	display: block;
+	margin: 0 auto;
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+	color: var(--dark-blue);
+	width: 100px;
+	font-weight: bold;
+}
+
+.slot-button {
+	background: var(--white);
+	border: 1px solid var(--darkblue);
+	padding: 5px 10px;
+	border-radius: 5px;
+	width: 100%;
+	margin: 5px 0;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.slot-button.reserved {
+	background-color: #ccc;
+	color: #666;
+	cursor: not-allowed;
+}
+
+.slot-button:hover {
+	background: var(--light-blue);
+	color: white;
+}
+
+.slot-button.selected {
+	background: var(--orange);
+	color: white;
+	border-color: var(--orange);
+}
+
+@media (max-width: 768px) {
+	.scheduler-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.scheduler-header {
+		flex-direction: column;
+		gap: 10px;
+	}
+}

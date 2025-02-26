@@ -1,145 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:root {
+	--white: #fafafa;
+	--darkblue: #2930d3;
+	--light-blue: #9ac4f8;
+	--orange: #f4b942;
+	--light-yellow: #f2d069;
+
+	--font: "Poppins";
+	--text-white: #ffffff;
+	--text-black: #000000;
+	--font-size: 1.5rem;
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #eee;
-  margin: 0;
-}
-
-#root {
-  height: 100vh;
-  background-image: url("./assets/images/background.webp");
-  background-size: cover;
-  background-position: top;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: 1fr;
-  align-content: start;
-  padding: 1rem;
-}
-
-header {
-  grid-column: 1 / 2;
-  grid-row: 1;
+	font-family: var(--font);
+	background-color: var(--white);
+	color: var(--text-black);
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
 }
 
 .logo {
-  font-size: larger;
+	height: auto;
+	width: auto;
 }
 
-.navbar {
-  grid-column: -2 / -1;
-  grid-row: 1;
+.title {
+	font-size: 3rem;
+	font-weight: 400;
+	color: var(--text-black);
+	text-align: center;
 }
 
-.navbar ul {
-  display: flex;
-  justify-content: end;
-  gap: 1rem;
-  list-style: none;
+p {
+	font-size: 1rem;
+	color: var(--text-black);
+	text-align: center;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: #eee;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
+.yellow-button {
+	font-size: 1rem;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 1rem;
+	padding: .8rem 1rem;
+	cursor: pointer;
+	color: var(--text-white);
+	background-color: var(--orange);
+	border: 3px solid var(--orange);
+	margin: 0.5rem;
 }
 
-.navbar a:hover {
-  scale: 110%;
+.yellow-button:hover {
+	color: var(--orange);
+	background-color: #fafafa;
+	border: 3px solid var(--orange);
+	box-shadow: 10px 10px 12px 1px rgba(0, 0, 0, 0.45);
 }
 
-.text-box {
-  grid-column: 1 / -1;
-  grid-row: 1;
-  align-self: center;
-  text-align: center;
+.darkblue-button {
+	font-size: 1rem;
+	font-weight: bold;
+	text-align: center;
+	background-color: var(--darkblue);
+	color: var(--text-white);
+	border-radius: 1rem;
+	border: 3px solid var(--darkblue);
+	padding: 0.5rem;
+	cursor: pointer;
+	width: auto;
 }
 
-.block-primary {
-  text-transform: uppercase;
-  margin-bottom: 2rem;
+.darkblue-button:hover {
+	color: var(--darkblue);
+	background-color: var(--light-blue);
+	border: 3px solid var(--darkblue);
+	box-shadow: 10px 10px 12px 1px rgba(0, 0, 0, 0.45);
 }
 
-.block-primary-main {
-  font-size: 3em;
-  letter-spacing: 5px;
-  animation: blink 12s infinite;
+.lightblue-button {
+	font-size: 1rem;
+	font-weight: bold;
+	text-align: center;
+	background-color: var(--light-blue);
+	color: var(--text-white);
+	border-radius: 1rem;
+	border: 3px solid var(--light-blue);
+	padding: 0.5rem;
+	cursor: pointer;
 }
 
-.block-primary-sub {
-  display: block;
-  font-weight: bold;
-  letter-spacing: 7px;
+.lightblue-button:hover {
+	color: var(--darkblue);
+	background-color: var(--light-blue);
+	border: 3px solid var(--darkblue);
+	box-shadow: 10px 10px 12px 1px rgba(0, 0, 0, 0.45);
 }
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  display: inline-block;
-  border-radius: 100px;
-  transition: all 0.2s;
-  position: relative;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn-white {
-  background-color: #fff;
-  color: #777;
+.card {
+	background-color: var(--white);
+	color: var(--text-black);
+	border-radius: 10%;
+	cursor: pointer;
 }
 
 footer {
-  grid-column: -2 / -1;
-  grid-row: 1;
-  align-self: end;
-  text-align: right;
+	background-color: var(--white);
+	color: var(--text-black);
 }
 
-.wcs {
-  text-decoration: none;
-  color: #ff1493ad;
-}
+@media screen and (min-width: 480px) and (max-width: 720px) {
+	.title {
+		font-size: 2rem;
+		font-weight: 400;
+	}
 
-.wcs:hover {
-  text-decoration: underline;
-}
-
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-    text-shadow: 0 0 5px #ff1493ad, 0 0 15px #eee, 0 0 20px #ff1493ad, 0 0 40px
-      #a00ac9, 0 0 60px #ff0000, 0 0 10px #970dc5, 0 0 98px #ff0000;
-    color: #fff;
-  }
+	.yellow-button {
+		font-size: 0.5rem;
+	}
 }

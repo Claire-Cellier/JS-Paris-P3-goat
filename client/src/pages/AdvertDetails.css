@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+	background-color: var(--white);
+	font-family: var(--font);
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+}
+
+.advert-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 20px;
+	background: var(--white);
+	border: 3px solid var(--orange);
+	border-radius: 20px;
+	box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.3);
+	width: auto;
+	height: auto;
+	overflow: hidden;
+	padding-top: 10px;
+	margin: 3rem;
+	margin-top: 0;
+	gap: 0.5rem;
+}
+
+.advert-profile {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	max-width: 30%;
+	min-height: 80%;
+	overflow: auto;
+	flex-wrap: wrap;
+	margin-bottom: 100px;
+}
+.profile-header {
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+.img-goat {
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	object-fit: cover;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile-name {
+	justify-content: center;
+	font-size: 3rem;
+	font-weight: initial;
+	text-align: center;
+	color: var(--text-black);
+	margin: 0;
+}
+
+.profile-calendar {
+	display: flex;
+	justify-content: center;
+	text-align: right;
+	align-items: center;
+	max-width: 68%;
+	max-height: 45%;
+	height: fit-content;
+	flex-wrap: wrap;
+}
+
+.profile-calendar h1 {
+	font-size: 2rem;
+	font-weight: bolder;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: var(--text-black);
+	margin: 1.5rem;
+}
+
+.profile-booking {
+	display: flex;
+	flex-direction: flex-end;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.profile-tags {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin-left: 1rem;
+}
+
+.tag-button-main,
+.tag-button-sub {
+	font-family: var(--font);
+	background-color: transparent;
+	font-weight: normal;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid;
+	border-radius: 10px;
+	padding: 5px 10px;
+	font-size: 1rem;
+}
+
+.tag-button-main {
+	color: var(--darkblue);
+	border-color: var(--darkblue);
+}
+
+.tag-button-sub {
+	color: var(--light-blue);
+	border-color: var(--light-blue);
+}
+.profile-description {
+	justify-content: center;
+	text-align: center;
+	width: 50ch;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: var(--text-black);
+	margin-top: 10px;
+	max-width: 100%;
+}
+.advert-reservation {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	gap: 20px;
+	margin-top: 20px;
+}
+.reservation-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: var(--orange);
+	color: var(--text-white);
+	border: 2px solid var(--orange);
+	font-size: 1rem;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.reservation-button:hover {
+	background-color: var(--white);
+	border-color: var(--orange);
+	color: var(--orange);
+}
+.status {
+	font-size: 18px;
+	text-align: center;
+	color: var(--text-black);
+	margin: 20px 0;
+}
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+	transform: scale(0.9);
+	animation: popIn 0.3s ease-out forwards;
+	width: 80%;
+	height: 80%;
+	overflow: hidden;
+}
+.modal-content h2 {
+	font-size: 3rem;
+	color: var(--orange);
+	margin-bottom: 10px;
+}
+.modal-content p {
+	font-family: var(--font);
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+	color: var(--text-black);
+}
+.modal-content p.tag-name {
+	font-family: var(--font);
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+	color: var(--orange);
+}
+.modal-content input {
+	width: 80%;
+	height: 25%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+.modal-content ::placeholder {
+	color: gray;
+	font-family: var(--font);
+	font-size: 1rem;
+}
+.modal-content button {
+	background: var(--orange);
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+	margin-top: 10px;
+}
+
+.modal-content button:hover {
+	background: var(--white);
+	color: var(--orange);
+	border: 2px solid var(--orange);
+	box-shadow: 10px 10px 12px 1px rgba(0, 0, 0, 0.45);
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes popIn {
+	from {
+		transform: scale(0.9);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+@media (max-width: 1520px) {
+	.advert-container {
+		padding: 15px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 3rem;
+		height: auto;
+		overflow: auto;
+		margin: 2rem;
+		border: 3px solid var(--orange);
+		border-radius: 10px;
+		box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.3);
+	}
+
+	.advert-profile {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+		gap: 20px;
+	}
+
+	.profile-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+		gap: 50px;
+		padding: 15px;
+	}
+
+	.img-goat {
+		width: 160px;
+		height: 160px;
+		object-fit: cover;
+	}
+
+	.profile-name {
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	.profile-tags {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px;
+		max-width: 100%;
+	}
+
+	.profile-description {
+		font-size: 1rem;
+		text-align: center;
+		padding: 0 15px;
+		width: 100%;
+		max-width: 500px;
+	}
+
+	.profile-calendar {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: auto;
+		max-width: 100%;
+		padding: 15px;
+		margin-top: 20px;
+	}
+
+	.profile-calendar h1 {
+		font-size: 1.5rem;
+		margin-bottom: 15px;
+	}
+
+	.advert-reservation {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-top: 15px;
+	}
+
+	.reservation-button {
+		width: 150px;
+		height: 45px;
+		font-size: 1rem;
+	}
+}

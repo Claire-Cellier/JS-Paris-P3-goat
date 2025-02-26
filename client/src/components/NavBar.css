@@ -1,0 +1,166 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+	position: relative;
+}
+
+.navbar-links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+}
+
+.logo {
+	height: 10rem;
+	width: auto;
+	cursor: pointer;
+}
+
+.logo:hover {
+	transform: scale(1.1);
+}
+
+.title-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.title-container,
+.title,
+.subtitle {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	font-weight: 400;
+}
+
+.subtitle {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+.uppercase {
+	font-weight: bold;
+}
+
+.title-container b {
+	font-weight: 700;
+}
+
+.connexion-icon {
+	height: 4rem;
+	width: auto;
+	cursor: pointer;
+	margin-right: 1rem;
+}
+
+.connexion-icon:hover {
+	transform: scale(1.1);
+}
+
+@media screen and (max-width: 720px) {
+	.navbar {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 10px;
+		position: relative;
+	}
+
+	.logo {
+		height: 6rem;
+		margin-right: 10px;
+	}
+
+	.connexion-icon {
+		height: 4rem;
+	}
+
+	.title-container {
+		position: static;
+		transform: none;
+		width: auto;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.title {
+		font-size: 1.8rem;
+	}
+
+	.subtitle {
+		font-size: 1rem;
+	}
+
+	.navbar-links {
+		gap: 1rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.navbar {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: 0 10px;
+		flex-wrap: wrap;
+	}
+
+	.logo {
+		height: 5rem;
+		margin-right: 8px;
+	}
+
+	.connexion-icon {
+		height: 3rem;
+	}
+
+	.title-container {
+		position: static;
+		transform: none;
+		width: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		flex-grow: 1;
+	}
+
+	.title {
+		font-size: 1.5rem;
+	}
+
+	.subtitle {
+		font-size: 0.9rem;
+	}
+
+	.navbar-links {
+		gap: 0.5rem;
+		flex-wrap: wrap;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+		margin-top: 10px;
+		width: fit-content;
+	}
+
+	.yellow-button {
+		font-size: 0.8rem;
+		padding: 8px;
+	}
+}

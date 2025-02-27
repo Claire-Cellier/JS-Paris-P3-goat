@@ -1,29 +1,33 @@
 .form-page {
 	border: 0.1rem solid var(--darkblue);
-	padding: 2rem;
-	margin: 2rem;
+	padding: 1.5rem;
+	margin: 1rem auto;
 	border-radius: 1rem;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	max-width: 800px; /* Empêche d'être trop large sur grand écran */
+	box-sizing: border-box;
 }
 
 .advert-form {
-	margin: 2rem;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 }
 
 .form-title {
-	font-size: 2rem;
+	font-size: 1.8rem;
 	font-weight: bold;
 	text-align: center;
-	margin: 0 0 2rem 0;
+	margin-bottom: 1.5rem;
 }
 
 .form-group {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin: 0 auto;
+	margin-bottom: 1rem;
+	width: 100%;
 }
 
 .tag-list {
@@ -35,7 +39,8 @@
 	cursor: pointer;
 	width: 40%;
 	padding-right: 1rem;
-	margin: 1rem 0 1rem 0;
+	margin-bottom: 1rem;
+	box-sizing: border-box;
 }
 
 .form-group-description {
@@ -49,19 +54,17 @@
 }
 
 .textDescription {
-	margin-top: 1rem;
-	margin-bottom: 2rem;
-	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	padding: 1rem;
 	font-size: 1rem;
 	width: 100%;
 	min-height: 50px; /* Hauteur de base */
-	padding: 10px;
 	font-size: 1rem;
 	border: 1px solid var(--dark-blue);
 	border-radius: 5px;
 	box-sizing: border-box;
-	overflow: hidden; /* Évite le défilement horizontal */
-	white-space: pre-wrap; /* Permet de gérer les retours à la ligne */
+	overflow: hidden;
+	white-space: pre-wrap;
 	word-wrap: break-word;
 	display: block;
 }
@@ -71,7 +74,7 @@
 	font-style: italic;
 	color: var(--light-blue);
 	text-align: center;
-	margin: 2rem 0 1rem 0;
+	margin: 1rem 0;
 }
 
 .submit-button {
@@ -83,23 +86,32 @@
 
 .disabled-button {
 	opacity: 0.5;
+	cursor: not-allowed;
 }
 
 .advert-booking p {
-	margin: 1rem;
+	margin: 1rem 0;
 	text-align: left;
 }
 
 .navigateButtons {
 	display: flex;
 	justify-content: center;
-	margin: 1rem;
+	margin: 1rem 0;
+	width: 100%;
 }
 
 @media screen and (min-width: 480px) and (max-width: 720px) {
+	.form-page {
+		width: 90%;
+		padding: 1rem;
+		margin: 1rem auto;
+	}
+
 	.form-group {
-		display: flex;
 		flex-direction: column;
+		align-items: stretch;
+		margin: 0;
 	}
 
 	.form-group-description {
@@ -107,6 +119,10 @@
 	}
 
 	.tag-list {
-		margin: 1rem 0 1rem 0;
+		width: 100%;
+	}
+
+	.textDescription {
+		padding: 0.75rem;
 	}
 }

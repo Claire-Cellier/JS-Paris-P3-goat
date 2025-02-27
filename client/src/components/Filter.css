@@ -55,3 +55,9 @@
 .scroll-btn:hover {
 	background-color: #dcdcdc;
 }
+
+@media (max-width: 768px) {
+	.filter-wrapper {
+		max-width: 400px;
+	}
+}

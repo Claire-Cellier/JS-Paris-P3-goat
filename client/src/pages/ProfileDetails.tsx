@@ -1,7 +1,7 @@
 import "./ProfileDetails.css";
 import { useEffect, useState } from "react";
 import { useNavigate, useOutletContext, useParams } from "react-router-dom";
-import AdvertBooking from "../components/AdvertBooking";
+import ProfileCalendar from "../components/ProfilCalendar";
 import type { Advert } from "../types/Advert";
 import type { AppContextInterface } from "../types/appContext.type";
 
@@ -97,7 +97,7 @@ function ProfilDetails() {
 					</div>
 				</div>
 				<div className="calendar">
-					<AdvertBooking
+					<ProfileCalendar
 						selectedSlot={selectedSlot}
 						setSelectedSlot={setSelectedSlot}
 					/>

@@ -40,7 +40,14 @@ label {
 
 .submit-container {
 	display: flex;
-	justify-content: center; /* Centre le bouton */
-	width: 100%; /* Prend toute la largeur du formulaire */
-	margin-top: 1rem; /* Espacement par rapport aux inputs */
+	justify-content: center;
+	width: 100%;
+	margin-top: 1rem;
+}
+
+@media screen and (max-width: 720px) {
+	.profileframe {
+		width: 90%;
+		margin: 1rem auto;
+	}
 }

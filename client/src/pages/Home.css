@@ -1,26 +1,33 @@
 .banner {
 	width: 100%;
 	height: 50vh;
-	padding: 2% 0;
+	margin: 1rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #f5f5f5; /* Ajout d'une couleur de fond */
-	border-radius: 10px; /* Coins arrondis */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
-	overflow: hidden; /* Évite les débordements */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
 }
 
 .image-home {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	border: 2px solid #333; /* Bordure plus marquée */
-	border-radius: 8px; /* Coins arrondis */
 	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .image-home:hover {
-	transform: scale(1.05); /* Effet de zoom au survol */
+	transform: scale(1.05);
 	opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+	.banner {
+		height: 20vh;
+		margin: 0.5rem;
+	}
+
+	.image-home {
+		object-fit: contain;
+	}
 }

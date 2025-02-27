@@ -83,3 +83,11 @@
 	border: 8px solid var(--orange);
 	box-shadow: 10px 10px 12px 1px rgba(0, 0, 0, 0.45);
 }
+
+@media (max-width: 768px) {
+	.cards {
+		height: 90%;
+		width: 85%;
+		margin: 1rem auto;
+	}
+}

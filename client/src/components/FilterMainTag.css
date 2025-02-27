@@ -44,7 +44,12 @@
 
 .tag-button {
 	height: 4rem;
-	width: auto;
+	width: 100%;
+	white-space: normal;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .filter-container h1 {
@@ -68,5 +73,16 @@
 
 	.filter-btn {
 		margin: .5rem;
+	}
+
+	.tags-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+		gap: 10px;
+		justify-content: center;
+	}
+
+	.tag-button {
+		width: 100%;
 	}
 }
